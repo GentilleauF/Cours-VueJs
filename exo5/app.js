@@ -11,11 +11,7 @@ data() {
 
 methods: {
     decrement() {
-        if(this.myNumber >=1){
-            this.myNumber--
-        } else {
-            this.myNumber==1
-        }
+      this.myNumber--
     },
     
     increment() {
