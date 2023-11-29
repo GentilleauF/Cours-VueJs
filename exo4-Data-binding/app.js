@@ -8,7 +8,7 @@ data() {
         age: 25,
         nbrFetiche: Math.random(),
         monImage : "./fry.png",
-        platsPref: ["Pizza", "Pates carbo", "Tacos" ]
+        platsPref: ["Pizza regina", "Pates carbonara" ]
 
 
     };
@@ -34,6 +34,19 @@ methods: {
     
     increment() {
         this.age++
+    },
+
+    addMeal() {
+        if(newMeal.value !=0){
+            this.platsPref.push(newMeal.value)
+        }
+        console.log(newMeal.value);
+    },
+
+    deleteMeal() {
+        this.platsPref.splice(deleteMeal.value,1)
+
+
     }
 
 }

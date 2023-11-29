@@ -11,39 +11,18 @@
         integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 </head>
 
-<body id="app">
-    <div class="text-center">
-        <h1>DataBinding</h1>
-        <img v-bind:src="monImage" alt="error" width="200">
-        <p>{{nom}}</p>
-        <div>
-             <input type="text" id="nameInput" :value="nom" ref="nameInput"> 
-             <button @click="changeName">Changer de nom</button> 
-        </div>
-        <div>
-            <button @click="decrement()">-</button>
-            <p>{{age}} ans</p>  
-            <button @click="increment()">+</button>
-        </div>
-      
-        <p>{{plusVieux()}}</p>
-        <p>{{nbrFetiche}}</p>
-        <div>
-            <h4>Mes plats favoris :</h2>
-            <ul class="list-group">
-                <li class="list-group-item" v-for="(element, index) in platsPref">{{(index) +": "+ element}}</li>
-            </ul>            
-        </div>
+<body>
 
-        <div>
-            <input type="text" id="newMeal">
-            <button @click="addMeal()">Ajouter un plat</button>
-        </div>
-        <br>
-        <input type="number" id="deleteMeal">
-        <button @click="deleteMeal()">Selectionner le numero du plat a supprimer</button>
-        <div>
-
+    <div id="monApp" class="container mt-4 mb-4 p-3 d-flex justify-content-center">
+        <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+            <button v-on:click.left="reduire(10)" type="button" class="btn btn-danger">-</button>
+            <h3 class="mx-3">le nombre : {{leNombre}}</h3>
+            <button v-on:click.right="augmenter(20)" type="button" class="btn btn-success">+</button>
+            <form v-on:submit.prevent>
+                <input v-on:input="capterInput($event)" type="text">
+                <button class="btn btn-primary" type="submit">Envoyer</button>
+            </form>
+        <h3 class="mx-3">{{uneString}}</h3>
         </div>
     </div>
 
