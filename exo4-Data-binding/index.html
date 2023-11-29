@@ -16,8 +16,16 @@
         <h1>DataBinding</h1>
         <img v-bind:src="monImage" alt="error" width="200">
         <p>{{nom}}</p>
-        <input type="text" :value="nom">
-        <p>{{age}} ans</p>
+        <div>
+             <input type="text" id="nameInput" :value="nom" ref="nameInput"> 
+             <button @click="changeName">Changer de nom</button> 
+        </div>
+        <div>
+            <button @click="decrement()">-</button>
+            <p>{{age}} ans</p>  
+            <button @click="increment()">+</button>
+        </div>
+      
         <p>{{plusVieux()}}</p>
         <p>{{nbrFetiche}}</p>
 
