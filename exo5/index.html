@@ -12,27 +12,12 @@
 </head>
 
 <body id="app">
-    <div class="text-center">
-        <h1>DataBinding</h1>
-        <img v-bind:src="monImage" alt="error" width="200">
-        <p>{{nom}}</p>
-        <div>
-             <input type="text" id="nameInput" :value="nom" ref="nameInput"> 
-             <button @click="changeName">Changer de nom</button> 
-        </div>
-        <div>
-            <button @click="decrement()">-</button>
-            <p>{{age}} ans</p>  
-            <button @click="increment()">+</button>
-        </div>
-      
-        <p>{{plusVieux()}}</p>
-        <p>{{nbrFetiche}}</p>
-        <div>
-            <h4>Mes plats favoris :</h2>
-            <ul class="list-group">
-                <li class="list-group-item" v-for="element in platsPref">{{element}}</li>
-            </ul>            
+    <h1>Nombre positifs</h1>
+    <div class="container mt-4 mb-4 p-3 d-flex justify-content-center">
+        <div class="btn-group" role="group">
+            <button class="btn btn-danger" @click="decrement()">-</button>
+            <h3 class="mx-3">{{myNumber}}</h3>  
+            <button  class="btn btn-success" @click="increment()">+</button>
         </div>
     </div>
 

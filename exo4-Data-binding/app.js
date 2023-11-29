@@ -7,7 +7,9 @@ data() {
         nom: "Fry",
         age: 25,
         nbrFetiche: Math.random(),
-        monImage : "./fry.png"
+        monImage : "./fry.png",
+        platsPref: ["Pizza", "Pates carbo", "Tacos" ]
+
 
     };
 },
