@@ -1,5 +1,4 @@
-
-
+//faire un compteur
 
 Vue.createApp({
 data() {
