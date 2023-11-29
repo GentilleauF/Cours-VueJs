@@ -38,15 +38,16 @@ methods: {
 
     addMeal() {
         if(newMeal.value !=0){
-            this.platsPref.push(newMeal.value)
+            this.platsPref.push(newMeal.value);
         }
         console.log(newMeal.value);
     },
 
     deleteMeal() {
-        this.platsPref.splice(deleteMeal.value,1)
-
-
+        let indexASupprimer = parseInt(deleteMeal.value)-1;
+        console.log(indexASupprimer);
+        this.platsPref.splice(indexASupprimer,1);
+        deleteMeal.value = ""
     }
 
 }
