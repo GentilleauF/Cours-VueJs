@@ -9,7 +9,4 @@ data() {
 };
 },
 
-methods: {
-},
-
 }).mount('#app');
