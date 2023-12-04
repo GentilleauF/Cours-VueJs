@@ -5,7 +5,6 @@ Vue.createApp({
     return {
       selectCard1: false,
       selectCard2: false,
-      backgrounColor: 'red',
     };
   },
 
