@@ -27,7 +27,11 @@
             Ajouter à la liste
         </button>
         <p v-if="movieArray.length === 0">Pas encore de films </p>
-        <p v-for="movie in movieArray" >{{movie}}</p>
+        <div v-for="(movie, index) in movieArray" >
+            <ul>
+                <li> {{index+1}}: {{movie}}</li>
+            </ul>
+        </div>
 
         </div>
     </div>
